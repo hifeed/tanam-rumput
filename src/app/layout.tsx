@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { site } from "@/content/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://carbonbank.id"),
@@ -60,6 +61,22 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: site.name,
+  legalName: site.legalName,
+  url: site.url,
+  logo: `${site.url}/images/logo.png`,
+  email: site.email,
+  foundingDate: "2024-02-05",
+  address: {
+    "@type": "PostalAddress",
+    addressRegion: "Lampung",
+    addressCountry: "ID",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -80,6 +97,10 @@ export default function RootLayout({
             gtag('config', 'G-VQ1P6MF6TB');
           `}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
       </head>
       <body className="min-h-full flex flex-col antialiased">
         <Header />

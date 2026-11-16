@@ -3,6 +3,14 @@ import Container from "@/components/layout/Container";
 import Section from "@/components/ui/Section";
 import Eyebrow from "@/components/ui/Eyebrow";
 import { metrics, theoryOfChange } from "@/content/metrics";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Impact & Theory of Change",
+  description:
+    "Carbon Bank's theory of change and impact metrics: restoring soil function, productive land cover and recurring income for rural communities in Lampung.",
+  path: "/impact",
+});
 
 export default function ImpactPage() {
   const kpis = metrics.kpis;

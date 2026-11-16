@@ -4,6 +4,14 @@ import Section from "@/components/ui/Section";
 import Eyebrow from "@/components/ui/Eyebrow";
 import { programs } from "@/content/programs";
 import { Leaf, Users, TrendingUp, CheckCircle2 } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Programs",
+  description:
+    "Carbon Bank's three integrated pillars — land restoration, women's economic participation and commercial supply — reinforcing each other for durable impact.",
+  path: "/programs",
+});
 
 const iconMap: Record<string, React.ElementType> = {
   forest: Leaf,
