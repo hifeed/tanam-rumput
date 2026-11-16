@@ -3,6 +3,14 @@ import Container from "@/components/layout/Container";
 import Section from "@/components/ui/Section";
 import { model } from "@/content/site";
 import { ArrowRight } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Our Model",
+  description:
+    "An integrated value chain that makes restoration pay: land preparation, soil improvement, nursery, cultivation, harvesting, processing, storage and buyer fulfilment.",
+  path: "/model",
+});
 
 export default function ModelPage() {
   return (

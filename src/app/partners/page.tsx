@@ -9,6 +9,14 @@ import {
   Users,
   ArrowRight,
 } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Partners",
+  description:
+    "Commercial buyers, grant funders, land partners and project collaborators: explore partnership opportunities with Carbon Bank in Lampung, Indonesia.",
+  path: "/partners",
+});
 
 const tracks = [
   {

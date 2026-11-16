@@ -5,6 +5,14 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import { about, site } from "@/content/site";
 import { team, companySize } from "@/content/team";
 import { Target, MapPin, Building2, Users } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "About",
+  description:
+    "Why Carbon Bank exists: PT Lampung Tanam Rumput restores degraded land in Lampung, Indonesia, into productive regenerative agricultural infrastructure that supports rural livelihoods.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

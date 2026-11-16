@@ -3,6 +3,14 @@ import Section from "@/components/ui/Section";
 import Eyebrow from "@/components/ui/Eyebrow";
 import { reports, site } from "@/content/site";
 import { FileText, DollarSign, BarChart3, Download } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Reports & Financial Summary",
+  description:
+    "Carbon Bank operating financials, FY2025 revenue and grant utilisation plan, shared transparently with grantors, partners and stakeholders.",
+  path: "/reports",
+});
 
 export default function ReportsPage() {
   return (
